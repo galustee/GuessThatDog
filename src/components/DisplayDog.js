@@ -17,7 +17,7 @@ const DisplayDog = (props) => {
 
   // triggers re-rendering of the dog image
   useEffect(() => {
-    console.log(props.selectedDog);
+    //console.log(props.selectedDog);
     getDog();
   }, [props.selectedDog]);
 
