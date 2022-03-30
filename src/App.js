@@ -163,6 +163,8 @@ function App() {
     setRandomDogs(getDogs(dogBreeds));
   }
 
+  // this is only a test
+
   // get index of "selected" dog
   const selectedDog = randomDogs.findIndex((dog) => dog.selectedBreed === true);
 
