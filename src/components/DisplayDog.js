@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import classes from "./DisplayDog.module.css";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from '@mui/material/CardContent';
+import DenseAppBar from "./AppBar";
 
 const DisplayDog = (props) => {
   const getDog = async () => {
@@ -25,11 +29,19 @@ const DisplayDog = (props) => {
 
   return (
     <div className={classes.doggo}>
-      <div className={classes.score}>Score: {props.scoreCount}</div>
-      <button onClick={props.newDogs} className={classes.button}>
+      <Button
+        variant="contained"
+        onClick={props.newDogs}
+        color="secondary"
+        sx={{ m: 1 }}
+      >
         New Doggo
-      </button>
-      <img src={dogData.message}></img>
+      </Button>
+      <Card>
+        <CardContent>
+        <img src={dogData.message}></img>
+        </CardContent>
+      </Card>
     </div>
   );
 };
