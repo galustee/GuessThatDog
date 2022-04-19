@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import DisplayDog from "./components/DisplayDog";
 import DogOptions from "./components/DogOptions";
+import DenseAppBar from "./components/AppBar";
 
 const dogBreedsRaw = {
   affenpinscher: [],
@@ -168,6 +169,7 @@ function App() {
 
   return (
     <div className="App">
+      <DenseAppBar scoreCount={scoreCount}/>
       <DisplayDog
         newDogs={() => {
           setNewDogs();

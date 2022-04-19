@@ -1,5 +1,6 @@
 import classes from "./DogOption.module.css";
 import { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
 
 const DogOption = (props) => {
   const [buttonStatus, setButtonStatus] = useState(true);
@@ -21,13 +22,15 @@ const DogOption = (props) => {
   }, [props.dogBreed]);
 
   return (
-    <button
+    <Button
+      sx={{mx: 1}}
+      variant="contained"
       onClick={checkIfCorrect}
-      //className={classes.dogButton}
-      className={buttonStatus ? classes.dogButton : classes.dogButtonIncorrect}
+      disabled={!buttonStatus}
+      //className={buttonStatus ? classes.dogButton : classes.dogButtonIncorrect}
     >
       {props.dogBreed.breed}
-    </button>
+    </Button>
   );
 };
 
