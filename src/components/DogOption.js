@@ -27,7 +27,6 @@ const DogOption = (props) => {
       variant="contained"
       onClick={checkIfCorrect}
       disabled={!buttonStatus}
-      //className={buttonStatus ? classes.dogButton : classes.dogButtonIncorrect}
     >
       {props.dogBreed.breed}
     </Button>
